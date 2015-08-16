@@ -2,9 +2,9 @@
 
 Python script in a Heroku App that uses:
 
-1) [BeautifulSoup](https://pypi.python.org/pypi/beautifulsoup4) to scrape all the headlines from the [New York Times Hompage](http://www.nytimes.com/) 
+1) [BeautifulSoup](https://pypi.python.org/pypi/beautifulsoup4) to scrape the top 10 current headlines from the [New York Times Hompage](http://www.nytimes.com/) 
 
-2) [Mailthon](https://github.com/eugene-eeo/mailthon) to send an email recap of the top 10 current headlines to a list of recipients
+2) [Mailthon](https://github.com/eugene-eeo/mailthon) to send an email recap with the headline links to a list of recipients
 
 ## Email Example
 
