@@ -1,3 +1,4 @@
+#Made by Wilbert Abreu, https://twitter.com/wilbert_abreu
 from bs4 import BeautifulSoup
 import urllib2
 from mailthon import postman, email
@@ -44,4 +45,4 @@ def getBuzzfeedQuizInfo():
 body = getBuzzfeedQuizInfo()
 
 sendMail(body)
-
+#Made by Wilbert Abreu, https://twitter.com/wilbert_abreu
