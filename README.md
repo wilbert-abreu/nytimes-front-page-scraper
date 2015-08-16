@@ -1,36 +1,33 @@
-# python-getting-started
+# New York Times Front Page Scraper
 
-A barebones Python app, which can easily be deployed to Heroku.
+Script I created that uses:
 
-This application support the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
+1) [BeautifulSoup](https://pypi.python.org/pypi/beautifulsoup4) to scrape all the headlines from the [New York Times Hompage](http://www.nytimes.com/) and 
 
-## Running Locally
+2) [Mailthon](https://github.com/eugene-eeo/mailthon) to send an email recap of the top 10 current headlines to a list of recipients
 
-Make sure you have Python [installed properly](http://install.python-guide.org).  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/) and [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup).
+## Email Example
 
-```sh
-$ git clone git@github.com:heroku/python-getting-started.git
-$ cd python-getting-started
-$ pip install -r requirements.txt
-$ createdb python_getting_started
-$ foreman run python manage.py migrate
-$ python manage.py collectstatic
-$ foreman start web
-```
+Subject Line: NY Times Front Page: 2015-08-16
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+**New York Time Front Page**
 
-## Deploying to Heroku
+1) [Exclusion of Blacks From Juries Raises New Scrutiny](http://www.nytimes.com/2015/08/17/us/politics/exclusion-of-blacks-from-juries-raises-renewed-scrutiny.html)
 
-```sh
-$ heroku create
-$ git push heroku master
-$ heroku run python manage.py migrate
-$ heroku open
-```
+2) [Your Weekend Briefing](http://www.nytimes.com/2015/08/16/nytnow/your-weekend-briefing.html)
 
-## Documentation
+3) [AT&T; Helped U.S. Spy on Internet Traffic, Files Reveal](http://www.nytimes.com/2015/08/16/us/politics/att-helped-nsa-spy-on-an-array-of-internet-traffic.html)
 
-For more information about using Python on Heroku, see these Dev Center articles:
+4) [Excess in Iowa: 90°, Trump’s Helicopter and a Butter Cow](http://www.nytimes.com/2015/08/16/us/politics/excess-in-iowa-90-a-butter-cow-and-rides-on-donald-trumps-helicopter.html)
 
-- [Python on Heroku](https://devcenter.heroku.com/categories/python)
+5) [G.O.P. Is Vague on Using Power Abroad](http://www.nytimes.com/2015/08/16/us/politics/hawkish-gop-offers-no-plan-for-us-action.html)
+
+6) [Locked in Solitary at Age 14: The Risks of Juvenile Isolation](http://www.nytimes.com/2015/08/16/us/citing-safety-adult-jails-put-youths-in-solitary-despite-risks.html)
+
+7) [A Charismatic Leader of the Civil Rights Movement](http://www.nytimes.com/2015/08/17/us/julian-bond-former-naacp-chairman-and-civil-rights-leader-dies-at-75.html)
+
+8) [Wrestling Big Ideas in a Bruising Workplace](http://www.nytimes.com/2015/08/16/technology/inside-amazon-wrestling-big-ideas-in-a-bruising-workplace.html)
+
+9) [‘Key & Peele’ Ends While Nation Could Still Use a Laugh](http://www.nytimes.com/2015/08/16/us/key-peele-ends-while-nation-could-still-use-a-laugh.html)
+
+10) [Amid Perilous Routes, Migrants Find Easy Path to Greece"](http://www.nytimes.com/2015/08/17/world/europe/turkey-greece-mediterranean-kos-bodrum-migrants-refugees.html)
