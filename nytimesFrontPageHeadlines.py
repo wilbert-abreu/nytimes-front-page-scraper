@@ -1,6 +1,3 @@
-from twilio.rest import TwilioRestClient
-from googlefinance import getQuotes
-import json
 from bs4 import BeautifulSoup
 import urllib2
 from mailthon import postman, email
