@@ -20,7 +20,7 @@ def sendMail(message):
 			content='<p><strong>New York Time Front Page</strong></p><p>%s</p>' % (message),
 			subject='NY Times Front Page: %s' % (today),
 			sender='Wilbert <abreu.wilbert@gmail.com>',
-			receivers=['wabreu511@gmail.com','millieyjw@gmail.com'],
+			receivers=['wabreu511@gmail.com'],
 		))
 	if r.ok:
 		print 'Sent!'
