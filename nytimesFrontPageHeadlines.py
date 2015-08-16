@@ -7,6 +7,8 @@ import os
 GMAILUSERNAME = os.environ['GMAILUSERNAME']
 GMAILPASSWORD = os.environ['GMAILPASSWORD']
 EMAILADDRESSES = os.environ['EMAILADDRESSES']
+SENDEREMAIL = os.environ['SENDEREMAIL']
+
 today = datetime.date.today()
 print today
 def sendMail(message):
@@ -14,7 +16,7 @@ def sendMail(message):
 	r = p.send(email(
 			content='<p><strong>New York Time Front Page</strong></p><p>%s</p>' % (message),
 			subject='NY Times Front Page: %s' % (today),
-			sender='Wilbert <abreu.wilbert@gmail.com>',
+			sender=SENDEREMAIL,
 			receivers=[EMAILADDRESSES],
 		))
 	if r.ok:
