@@ -1,8 +1,8 @@
 # New York Times Front Page Scraper
 
-Script I created that uses:
+Python script in a Heroku App that uses:
 
-1) [BeautifulSoup](https://pypi.python.org/pypi/beautifulsoup4) to scrape all the headlines from the [New York Times Hompage](http://www.nytimes.com/) and 
+1) [BeautifulSoup](https://pypi.python.org/pypi/beautifulsoup4) to scrape all the headlines from the [New York Times Hompage](http://www.nytimes.com/) 
 
 2) [Mailthon](https://github.com/eugene-eeo/mailthon) to send an email recap of the top 10 current headlines to a list of recipients
 
