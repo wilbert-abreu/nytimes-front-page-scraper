@@ -3,23 +3,19 @@ import urllib2
 from mailthon import postman, email
 import datetime
 import os
-#account = "AC0923ef72f2fd871c25f715c5344a40f4"
-#token = "facd245d1e569206ea89092aa6e7a7fb"
-#client = TwilioRestClient(account, token)
-#
-#def text(message):
-#	client.messages.create(to="+16466719043", from_="+17323938487",
-#                                 body=message)
 
+GMAILUSERNAME = os.environ['GMAILUSERNAME']
+GMAILPASSWORD = os.environ['GMAILPASSWORD']
+EMAILADDRESSES = os.environ['EMAILADDRESSES']
 today = datetime.date.today()
 print today
 def sendMail(message):
-	p = postman(host='smtp.gmail.com', auth=(os.environ['GMAILUSERNAME'], os.environ['GMAILPASSWORD']))
+	p = postman(host='smtp.gmail.com', auth=(GMAILUSERNAME, GMAILPASSWORD))
 	r = p.send(email(
 			content='<p><strong>New York Time Front Page</strong></p><p>%s</p>' % (message),
 			subject='NY Times Front Page: %s' % (today),
 			sender='Wilbert <abreu.wilbert@gmail.com>',
-			receivers=['wabreu511@gmail.com'],
+			receivers=[EMAILADDRESSES],
 		))
 	if r.ok:
 		print 'Sent!'
@@ -32,8 +28,7 @@ def getBuzzfeedQuizInfo():
     soup = BeautifulSoup(urllib2.urlopen(req).read())
     try:
 		articles = soup.select(".story-heading a")[:10]
-#		
-#		body = articles[2]
+
 		body = ""
 		number=1
 		for article in articles: 
@@ -45,6 +40,6 @@ def getBuzzfeedQuizInfo():
         getBuzzfeedQuizInfo()
 
 body = getBuzzfeedQuizInfo()
-#print body 
+
 sendMail(body)
-#print message
+
