@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import urllib2
 from mailthon import postman, email
 import datetime
+import os
 #account = "AC0923ef72f2fd871c25f715c5344a40f4"
 #token = "facd245d1e569206ea89092aa6e7a7fb"
 #client = TwilioRestClient(account, token)
@@ -9,10 +10,11 @@ import datetime
 #def text(message):
 #	client.messages.create(to="+16466719043", from_="+17323938487",
 #                                 body=message)
+
 today = datetime.date.today()
 print today
 def sendMail(message):
-	p = postman(host='smtp.gmail.com', auth=(GMAILUSERNAME, GMAILPASSWORD))
+	p = postman(host='smtp.gmail.com', auth=(os.environ['GMAILUSERNAME'], os.environ['GMAILPASSWORD']))
 	r = p.send(email(
 			content='<p><strong>New York Time Front Page</strong></p><p>%s</p>' % (message),
 			subject='NY Times Front Page: %s' % (today),
