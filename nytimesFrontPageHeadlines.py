@@ -12,7 +12,7 @@ import datetime
 today = datetime.date.today()
 print today
 def sendMail(message):
-	p = postman(host='smtp.gmail.com', auth=('abreu.wilbert@gmail.com', 'vxerdqxjizrigvfh'))
+	p = postman(host='smtp.gmail.com', auth=(GMAILUSERNAME, GMAILPASSWORD))
 	r = p.send(email(
 			content='<p><strong>New York Time Front Page</strong></p><p>%s</p>' % (message),
 			subject='NY Times Front Page: %s' % (today),
